@@ -7,7 +7,6 @@ import java.io.UnsupportedEncodingException;
 import net.baystation12.calliope.network.Login;
 import net.baystation12.calliope.network.NetworkMessage;
 
-
 import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.kryonet.Listener;
 import com.esotericsoftware.kryonet.Server;

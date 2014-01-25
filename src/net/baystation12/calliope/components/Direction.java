@@ -25,7 +25,7 @@ public class Direction extends Component {
 		{DOWN, UP, EAST, WEST, NORTH, SOUTH}
 	};
 	
-	public byte direction;
+	public byte direction = NORTH;
 	
 	public void Reverse()
 	{
@@ -54,5 +54,19 @@ public class Direction extends Component {
 				}
 			}
 		}
+	}
+
+	@Override
+	public void reset()
+	{
+		direction = NORTH;
+	}
+
+	@Override
+	public Component copy()
+	{
+		Direction direction = new Direction();
+		direction.direction = NORTH;
+		return direction;
 	}
 }

@@ -1,8 +1,21 @@
 package net.baystation12.calliope.components;
 
 import com.artemis.Component;
-import com.artemis.Entity;
 
 public class Position extends Component {
-	public Entity location;
+	public int location;
+	
+	@Override
+	public void reset()
+	{
+		location = -1;
+	}
+
+	@Override
+	public Component copy()
+	{
+		Position position = new Position();
+		position.location = this.location;
+		return position;
+	}
 }

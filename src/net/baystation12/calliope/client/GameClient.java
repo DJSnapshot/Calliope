@@ -11,7 +11,6 @@ import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 
-import com.artemis.Entity;
 import com.esotericsoftware.kryonet.Client;
 import com.esotericsoftware.kryonet.Connection;
 import com.esotericsoftware.kryonet.Listener;
@@ -21,7 +20,7 @@ public class GameClient extends Listener {
 	public static GameClient client;
 	public static Client connection;
 	
-	private static Map<Integer, Entity> entity_by_id;
+	private static Map<Integer, Integer> entity_by_id;
 	private static boolean running = false;
 	private static boolean logged_in = false;
 
@@ -72,7 +71,7 @@ public class GameClient extends Listener {
 		NetworkMessage.registerClasses(connection.getKryo());
 		
 		//Set up the map of IDs.
-		entity_by_id = new HashMap<Integer, Entity>();
+		entity_by_id = new HashMap<Integer, Integer>();
 	}
 	
 	@Override
